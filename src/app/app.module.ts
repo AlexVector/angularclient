@@ -8,13 +8,16 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserService } from './service/user.service';
 import { UserValidComponent } from './user-valid/user-valid.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import {PostmessageService} from "./service/postmessage.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserFormComponent,
-    UserValidComponent
+    UserValidComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { UserValidComponent } from './user-valid/user-valid.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, PostmessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
