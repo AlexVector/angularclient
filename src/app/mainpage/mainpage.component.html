@@ -1,0 +1,53 @@
+<!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+<section>
+  <div class="container">
+    <div class="row">
+      <!-- MAIN -->
+      <main class="col-md-8 col-lg-9">
+        <div class="list-group list-group-flush border-bottom scrollarea">
+
+          <div class="list-group-item list-group-item-action py-3 lh-tight"
+               *ngFor="let msg of messages">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+              <strong class="mb-1">{{msg.authorname}}</strong><p>{{msg.postdate}}</p>
+            </div>
+            <div class="col-10 mb-1 small">{{msg.posttext}}</div>
+          </div>
+
+        </div>
+      </main>
+      <!-- ASIDE -->
+      <div class="col-md-4 col-lg-3">
+        <div class="row">
+          <!-- ASIDE #1 -->
+          <aside class="col-sm-6 col-md-12">
+
+            <table class="table table-bordered table-striped">
+              <thead class="thead-dark">
+              <tr>
+                <th scope="col">Идентификатор</th>
+                <th scope="col">Имя пользователя</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{ user.name }}</td>
+                <td>{{ user.status }}</td>
+              </tr>
+              </tbody>
+            </table>
+
+          </aside>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+  </div>
+</footer>
